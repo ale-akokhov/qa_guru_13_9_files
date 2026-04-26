@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'guru.qa'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testImplementation 'com.codeborne:selenide:7.16.0'
+    testImplementation 'org.assertj:assertj-core:4.0.0-M1'
+    testImplementation 'com.opencsv:opencsv:5.12.0'
+    testImplementation 'com.codeborne:xls-test:1.4.3'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.16'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.16'
+
+    testImplementation ('com.codeborne:pdf-test:2.1.0') {
+        exclude group: 'org.apache.poi'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

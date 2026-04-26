@@ -30,7 +30,7 @@ public class SelenideTest {
     void uploadTest () {
         Selenide.open("https://the-internet.herokuapp.com/upload");
         $("input[type='file']").uploadFromClasspath("Files/1.txt");
-        //$(".row").shouldHave(text("1.txt"));
+        //$(".row").shouldHave(text("1.txt")); Тута я не разобралься как сделать. (
         $("#file-submit").click();
         $(".example").shouldHave(text("File Uploaded!"))
                                 .shouldHave(text("1.txt"));
