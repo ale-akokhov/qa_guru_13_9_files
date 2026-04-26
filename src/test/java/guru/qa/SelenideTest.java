@@ -16,7 +16,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class SelenideTest {
 
-    @Disabled
     @Test
     void downloadTest () throws Exception {
         Selenide.open("https://github.com/junit-team/junit-framework/blob/main/README.md");
@@ -34,7 +33,7 @@ public class SelenideTest {
         //$(".row").shouldHave(text("1.txt"));
         $("#file-submit").click();
         $(".example").shouldHave(text("File Uploaded!"))
-                .shouldHave(text("1.txt"));
+                                .shouldHave(text("1.txt"));
 
     }
 }
